@@ -11,10 +11,14 @@ public class RemoteControl {
 	Command[] offCommands;
 	
 	public RemoteControl() {
-		onCommands = new Command[7];
-		offCommands = new Command[7];
+		onCommands = new Command[3];
+		offCommands = new Command[3];
 		
-		//Command noCommand = new NoCommand();
+		NoCommand noCommand = new NoCommand();
+		for(int i=0; i<onCommands.length; i++) {
+			onCommands[i] = noCommand;
+			offCommands[i] = noCommand;
+		}
 	}
 	
 	public void setCommand(int slot, Command onCommand, Command offCommand) {

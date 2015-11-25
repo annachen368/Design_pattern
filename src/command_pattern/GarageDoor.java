@@ -1,25 +1,33 @@
 package command_pattern;
 
 public class GarageDoor {
+	
+	String location;
+	
+	public GarageDoor() {}
+
+	public GarageDoor(String location) {
+		this.location = location;
+	}
 
 	public void up() {
-		System.out.println("door up");
+		System.out.println(location + " garage Door is Up");
 	}
-	
+
 	public void down() {
-		System.out.println("door down");
+		System.out.println(location + " garage Door is Down");
 	}
-	
+
 	public void stop() {
-		System.out.println("door stop");
+		System.out.println(location + " garage Door is Stopped");
 	}
-	
+
 	public void lightOn() {
-		System.out.println("door light on");
+		System.out.println(location + " garage light is on");
 	}
-	
+
 	public void lightOff() {
-		System.out.println("door light off");
+		System.out.println(location + " garage light is off");
 	}
 	
 }
